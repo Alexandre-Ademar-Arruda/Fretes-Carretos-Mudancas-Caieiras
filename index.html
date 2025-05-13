@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carreto, Frete e Mudança em Caieiras - Já Tô Chegando</title>
+  <meta name="description" content="Solicite orçamento de carreto, frete ou mudança em Caieiras, Franco da Rocha e região. Serviço rápido com atendimento pelo WhatsApp.">
+  <meta name="keywords" content="carreto Caieiras, frete Franco da Rocha, mudança Franco da Rocha, transporte de móveis">
+  <meta name="author" content="Já Tô Chegando Transportes">
+
+  <!-- Open Graph (Facebook, WhatsApp) -->
+  <meta property="og:title" content="Carreto em Caieiras - Já Tô Chegando Transportes" />
+  <meta property="og:description" content="Solicite orçamento rápido de frete, carreto e mudança em Caieiras e região." />
+  <meta property="og:url" content="https://seusite.com/carreto-em-caieiras.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://seusite.com/imagens/carreto.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Carreto em Caieiras - Já Tô Chegando" />
+  <meta name="twitter:description" content="Solicite frete e mudança pelo WhatsApp em segundos." />
+  <meta name="twitter:image" content="https://seusite.com/imagens/carreto.jpg" />
+
+  <!-- Schema.org (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "name": "Já Tô Chegando Transportes",
+    "url": "https://seusite.com/carreto-em-caieiras.html",
+    "description": "Empresa de carretos, fretes e mudanças em Caieiras e região.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Caieiras",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "telephone": "+55-11-99542-4085",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Franco da Rocha, Caieiras, Francisco Morato"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+  <header>
+    <h1>Carretos Fretes Mudanças</h1>
+    <h2>CAIEIRAS</h2>
+  </header>
+
+
+  <main>
+    <section aria-label="Solicitar orçamento">
+      <h2>Solicite seu Orçamento</h2>
+      <button id="btnOrcamento" aria-label="Clique para iniciar o orçamento">📝 Solicitar Orçamento</button>
+    </section>
+
+    <section id="comodosContainer" class="hidden" aria-label="Seleção de Cômodos">
+      <h2>Escolha os Itens por Cômodo</h2>
+
+      <article>
+        <h3 class="comodoToggle" data-comodo="cozinha">🍽️ Cozinha</h3>
+        <form id="cozinha" class="comodo hidden">
+          <label><input type="checkbox" id="geladeira" name="Cozinha" value="✅🧊 Geladeira" /> ✅🧊 Geladeira</label>
+          <label><input type="checkbox" id="fogao" name="Cozinha" value="✅🍳 Fogão" /> ✅🍳 Fogão</label>
+          <label><input type="checkbox" id="maquina" name="Cozinha" value="✅🧼 Máquina de Lavar Roupa" /> ✅🧼 Máquina de Lavar Roupa</label>
+          <label><input type="checkbox" id="microondas" name="Cozinha" value="✅🍔 Micro-ondas" /> ✅🍔 Micro-ondas</label>
+          <label><input type="checkbox" id="lavaLoucas" name="Cozinha" value="✅🍽️ Lava-louças" /> ✅🍽️ Lava-louças</label>
+          <label><input type="checkbox" id="forno" name="Cozinha" value="✅🔥 Forno" /> ✅🔥 Forno</label>
+        </form>
+      </article>
+
+      <article>
+        <h3 class="comodoToggle" data-comodo="quarto">🛏️ Quarto</h3>
+        <form id="quarto" class="comodo hidden">
+          <label><input type="checkbox" id="colchao" name="Quarto" value="✅🛏️ Colchão" /> ✅🛏️ Colchão</label>
+          <label><input type="checkbox" id="box" name="Quarto" value="✅🛏️ Box" /> ✅🛏️ Box</label>
+          <label><input type="checkbox" id="guardaRoupa" name="Quarto" value="✅👚 Guarda-roupa" /> ✅👚 Guarda-roupa</label>
+        </form>
+      </article>
+
+      <article>
+        <h3 class="comodoToggle" data-comodo="sala">🛋️ Sala</h3>
+        <form id="sala" class="comodo hidden">
+          <label><input type="checkbox" id="sofa" name="Sala" value="✅🛋️ Sofá" /> ✅🛋️ Sofá</label>
+          <label><input type="checkbox" id="rack" name="Sala" value="✅📺 Rack" /> ✅📺 Rack</label>
+          <label><input type="checkbox" id="estante" name="Sala" value="✅🖼️ Estante" /> ✅🖼️ Estante</label>
+        </form>
+      </article>
+    </section>
+
+    <section id="dadosFinais" class="hidden" aria-label="Dados do cliente para envio">
+      <h2>Dados para o Orçamento</h2>
+
+      <label for="nome">🙋 Nome:
+        <input type="text" id="nome" placeholder="Seu nome completo" required />
+      </label>
+      <label for="carregar">📍 Endereço de carregar:
+        <input type="text" id="carregar" placeholder="Rua e número de origem" required />
+      </label>
+      <label for="descarregar">📍 Endereço de descarregar:
+        <input type="text" id="descarregar" placeholder="Rua e número de destino" required />
+      </label>
+      <label for="data">📅 Data do carreto:
+        <input type="date" id="data" required />
+      </label>
+
+      <button id="btnEnviarZap">📤 Enviar Orçamento pelo WhatsApp</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Já Tô Chegando Transportes | Carretos em Franco da Rocha</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
